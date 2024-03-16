@@ -1,18 +1,4 @@
-
-
-****SENG 637 - Dependability and Reliability of Software Systems**
-**
->   **Assignment \#4**
->   **Mutation Testing (Fault Injection) & GUI and Web Testing**
->   Instructors: 
->   -   Somaye Modaberi (somayeh.modberi@ucalgary.ca)  
->   Department of Electrical and Software Engineering
->   University of Calgary
-
-Due Date: Check D2L for the submission deadline.
-
-
-<span style="color:DarkCyan  ">
+\***\*SENG 637 - Dependability and Reliability of Software Systems**
 
 > **Summary:
 > Part 1:**
@@ -38,26 +24,6 @@ Due Date: Check D2L for the submission deadline.
 
   - Automate your designed test cases using Selenium and add verification
     points to your scripts
-
-# 1 INTRODUCTION
-
-This lab includes two parts: Mutation Testing and GUI Testing.
-Through part one, the students will learn how to inject mutation faults in a Java code-base using a mutation testing tool and how to interpret the reported mutation scores and use that knowledge to design new test cases to improve the overall quality of the test suite.
-Part two, focuses on most common way of GUI test automation, record and replay. Students will learn how to use a very well-known tool for web interface testing (Selenium) and will compare it with another alternative.
-
-# 2 PART 1: MUTATION TESTING
-
-## 2.1 OBJECTIVES
-
-The purpose of the first part of this assignment is to give students hands-on experience in assessing the effectiveness of their test suites created in assignments 2 and 3 using mutation testing. To do this, students will need to create mutants (faulty versions) of the SUT, and then run their test suite against the mutants to determine if their test suite can accurately distinguish (kill!) mutants.
-
-After completing part 1, students will:
-
-- Gain an understanding of what mutation testing is and why it is useful
-
-- Be able to measure the mutation score of their test suites in order to analyze the results
-
-- Become familiar with the use of a mutation testing tool
 
 ## 2.2 TESTING TOOLS
 
@@ -85,21 +51,19 @@ Similar to assignments 2 and 3, the system to be tested for this part is JFreeCh
 
 ![](./media/1-Mutators.png)
 
-
 3.  If you could not find the Pitclipse in your Eclipse Marketplace please do the followings:
 
     1.  Start Eclipse, then select Help \> Install New Software.
 
     2.  Click Add, in the top-right corner.
 
-    3.  Put Name: Pitclipse and Location:  http://eclipse.pitest.org/release/
+    3.  Put Name: Pitclipse and Location: http://eclipse.pitest.org/release/
 
     4.  Press Add and follow the installation process
 
 Note that, Pitest by default employs only mutation operators at the method-level. <span style="color:MidnightBlue   ">**You need to enable the class-level mutators before starting your tests.** <span style="color:black ">Follow these steps to select all mutators.
 
 **Figure 1 – Enabling mutators in Pitest**
-
 
 ## 2.5 INSTRUCTIONS
 
@@ -117,7 +81,6 @@ Add the JFreeChart source code given in assignment 4 to your project. Add all li
 
 As a practice, run mutation tests on the test cases provided under `org.jfree.data.junit` in the test folder of _JFreeChart_Lab4_ project. Record all results. (Right click on the `org.jfree.data.junit` and then run as PIT Mutation Test)
 
-
 1.  Note that in order to run mutation tools successfully, your test cases must pass (all green). For example, the `DataUtilitiesTes` test case has error in `org.jfree.data.junit`, running Pitest you will get exception. If there is any defect that is found by the tests (error/failure), they need to be fixed in the code before running the mutation tool.
 
 ![](media/6-Run-Junit.png)
@@ -126,16 +89,11 @@ As a practice, run mutation tests on the test cases provided under `org.jfree.da
 
 ![](media/8-PIT-Mutation-Test.png)
 
-
 2.  Expect that mutation testing of some classes might take long time. Let the tool runs and do not terminate it until the test ends and you get the mutation testing reports.
-
 
 > ![](./media/3-PIT-Summary.png)
 
-
-
 > ![](./media/4-PIT-Mutations.png)
-
 
 > ![](./media/5-Console.png)
 
@@ -170,11 +128,9 @@ The main objective of this part of the assignment is to familiarize students wit
 
 In this assignment, you will mainly use Selenium web-interface testing tool to test one of the following websites.
 
-- <span style="color:green">Shop Smart Canada Page
-
-- <span style="color:blue">Home Depot Page
-
-- <span style="color:purple">Leon's Page
+- Shop Smart Canada Page
+- Home Depot Page
+- Leon's Page
 
 You will also explore this alternative tool: Sikulix (http://sikulix.com/quickstart/)
 
@@ -192,17 +148,17 @@ You will also explore this alternative tool: Sikulix (http://sikulix.com/quickst
 
     2.  Each student must automate at least 2 **different functionalities of the application** under test. For example, Login, Purchase for an online shopping system, etc. (i.e., minimum 8 tests for teams with 4 students).
 
-2.  **Automate** your test cases, using Selenium:
+1.  **Automate** your test cases, using Selenium:
 
     1. Each functionality must be tested with different possible test data. For example, Login with valid, invalid user.
 
-3.  **Verify** the output of the tests by adding verification check points.Verifications must be done automatically unless the tool does not support automated verification in that specific context, which in that case report that as disadvantages of the tool and design another test that can be automated.
+1.  **Verify** the output of the tests by adding verification check points.Verifications must be done automatically unless the tool does not support automated verification in that specific context, which in that case report that as disadvantages of the tool and design another test that can be automated.
 
-4.  **Execute** your recorded scripts to test the system.
+1.  **Execute** your recorded scripts to test the system.
 
-5.  **Document** defects at the end of your report file, if you find any during test automation (Note: Given applications are almost stable, do not expect to find many defects in these applications. It is acceptable that students report no defects in this assignment).
+1.  **Document** defects at the end of your report file, if you find any during test automation (Note: Given applications are almost stable, do not expect to find many defects in these applications. It is acceptable that students report no defects in this assignment).
 
-6.  **Submission:**
+1.  **Submission:**
 
     1.  Based on the experience that you had with Selenium, answer the questions in the template report file and submit it on GitHub.
 
@@ -213,8 +169,6 @@ You will also explore this alternative tool: Sikulix (http://sikulix.com/quickst
 ## 4.1 Lab report and Test suites (100%)
 
 Students will be required to submit a report on their work in the lab as a group. To be consistent, please use the template markdown file “Assignment4-ReportTemplate.md” provided online under the Assignment 4 folder. If desired, feel free to rename the sections, as long as the headings are still descriptive and accurate.
-
-<span style="color:MidnightBlue   ">**NOTE2: include folder together with your report. One containing Part 1’s final test suite, another containing Selenium test scripts.**
 
 A portion of the grade for the lab report will be allocated to organization and clarity. The report marking scheme is as follows:
 
@@ -230,14 +184,6 @@ A portion of the grade for the lab report will be allocated to organization and 
 | Explain your test case design process                                                                                                                             | 10  |
 | Use of automated verification points in each script. If automated verification point is not used, provide valid reason                                            | 10  |
 | Use different test data per test. If not used, provide valid reason                                                                                               | 10  |
-| **Other (10)**                                                                                                                                                     |     |
+| **Other (10)**                                                                                                                                                    |     |
 | A discussion on how the team work/effort was divided and managed. Any lessons learned from your teamwork on this lab?                                             | 5   |
-|Comments/feedback on the assignment itself  | 5   |
-
-# 5 REFERENCES
-
-[1] J. O. Yu-Seung Ma, "Description of Class Mutation Operators for Java,"2005\.(http://cs.gmu.edu/\~offutt/mujava/mutopsClass.pdf)
-
-[2] J. O. Yu-Seung Ma, "Description of Method-level Mutation Operators for Java," 2005. (http://cs.gmu.edu/\~offutt/mujava/mutopsMethod.pdf)
-
-[3] "JFreeChart," Internet: <http://www.jfree.org/jfreechart> [4] "Pitest," Internet: <http://pitest.org/>
+| Comments/feedback on the assignment itself                                                                                                                        | 5   |
